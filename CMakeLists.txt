@@ -1,6 +1,11 @@
 cmake_minimum_required(VERSION 2.6)
 project (cjson C)
 
+IF (MSVC)
+    FIND_PACKAGE (MSVC MODULE)
+    MSVC_SET_WARNING_LEVEL(3)
+ENDIF (MSVC)
+
 SET (LIB_SRC cJSON.c cJSON.h)
 ADD_LIBRARY (cjson ${LIB_SRC})
 
@@ -13,6 +18,5 @@ IF(UNIX AND NOT APPLE)
 ENDIF()
             
 IF (MSVC)
-    FIND_PACKAGE (MSVC MODULE)
     MSVC_CRT_SECURE_NO_WARNINGS (cjson)
 ENDIF (MSVC)
