@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.6)
 project (cjson C)
 
 IF (MSVC)
-    FIND_PACKAGE (MSVC MODULE)
+    include (MSVC)
     MSVC_SET_WARNING_LEVEL(3)
 ENDIF (MSVC)
 
