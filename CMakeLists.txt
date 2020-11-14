@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 2.9)
 project (cjson C)
 
 SET (LIB_SRC cJSON.c cJSON.h)
